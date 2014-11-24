@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MediaDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4147/MediaDataService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4147/MediaDataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:4147/MediaDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4147/MediaDataService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:4147/MediaDataService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMediaDataService_DeleteMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMedia" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DeleteMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DeleteMedia_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q1:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DeleteMedia_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q2:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="DownloadChunkRequest">
+    <wsdl:part name="parameters" element="tns:DownloadChunkRequest" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileInfo">
+    <wsdl:part name="parameters" element="tns:DownloadFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileInfo_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DownloadMedia_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q3:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DownloadMedia_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q4:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="DownloadRequest">
+    <wsdl:part name="parameters" element="tns:DownloadRequest" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DownloadMediaThumbnail_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q5:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_DownloadMediaThumbnail_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q6:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaFilesName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserMediaFilesName" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaFilesName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserMediaFilesNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaFilesName_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q7:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaFilesName_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q8:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserMediaMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserMediaMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaMetadata_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q9:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetAllUserMediaMetadata_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q10:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetMediaMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetMediaMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetMediaMetadata_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q11:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_GetMediaMetadata_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q12:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UpdateMediaMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMediaMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UpdateMediaMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMediaMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UpdateMediaMetadata_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q13:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UpdateMediaMetadata_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q14:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="UploadMediaFileInfo">
+    <wsdl:part name="parameters" element="tns:UploadMediaFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="UploadMediaFileInfo_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="UserName" element="tns:UserName" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UploadMedia_OutputMessage" />
+  <wsdl:message name="IMediaDataService_UploadMedia_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q15:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UploadMedia_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q16:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="UploadThumbFileInfo">
+    <wsdl:part name="parameters" element="tns:UploadThumbFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="UploadThumbFileInfo_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="MediaFileName" element="tns:MediaFileName" />
+    <wsdl:part name="UserName" element="tns:UserName" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UploadMediaThumbnail_OutputMessage" />
+  <wsdl:message name="IMediaDataService_UploadMediaThumbnail_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q17:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_UploadMediaThumbnail_MediaFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q18:MediaFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_LoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_LoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_LoginUser_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q19:UserFault" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaDataService_RegisterUser_UserFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/MediaDataApplication.WcfService.DataContracts" name="detail" element="q20:UserFault" />
+  </wsdl:message>
+  <wsdl:portType name="IMediaDataService">
+    <wsdl:operation name="DeleteMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/DeleteMedia" message="tns:IMediaDataService_DeleteMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/DeleteMediaResponse" message="tns:IMediaDataService_DeleteMedia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/DeleteMediaMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_DeleteMedia_MediaFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/DeleteMediaUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_DeleteMedia_UserFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/DownloadMedia" name="DownloadChunkRequest" message="tns:DownloadChunkRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaResponse" name="DownloadFileInfo" message="tns:DownloadFileInfo" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_DownloadMedia_UserFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_DownloadMedia_MediaFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMediaThumbnail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaThumbnail" name="DownloadRequest" message="tns:DownloadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaThumbnailResponse" name="DownloadFileInfo" message="tns:DownloadFileInfo" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaThumbnailMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_DownloadMediaThumbnail_MediaFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/DownloadMediaThumbnailUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_DownloadMediaThumbnail_UserFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserMediaFilesName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaFilesName" message="tns:IMediaDataService_GetAllUserMediaFilesName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaFilesNameResponse" message="tns:IMediaDataService_GetAllUserMediaFilesName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaFilesNameMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_GetAllUserMediaFilesName_MediaFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaFilesNameUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_GetAllUserMediaFilesName_UserFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserMediaMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaMetadata" message="tns:IMediaDataService_GetAllUserMediaMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaMetadataResponse" message="tns:IMediaDataService_GetAllUserMediaMetadata_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaMetadataUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_GetAllUserMediaMetadata_UserFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/GetAllUserMediaMetadataMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_GetAllUserMediaMetadata_MediaFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/GetMediaMetadata" message="tns:IMediaDataService_GetMediaMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/GetMediaMetadataResponse" message="tns:IMediaDataService_GetMediaMetadata_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/GetMediaMetadataUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_GetMediaMetadata_UserFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/GetMediaMetadataMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_GetMediaMetadata_MediaFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMediaMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/UpdateMediaMetadata" message="tns:IMediaDataService_UpdateMediaMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/UpdateMediaMetadataResponse" message="tns:IMediaDataService_UpdateMediaMetadata_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/UpdateMediaMetadataUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_UpdateMediaMetadata_UserFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/UpdateMediaMetadataMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_UpdateMediaMetadata_MediaFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/UploadMedia" name="UploadMediaFileInfo" message="tns:UploadMediaFileInfo" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/UploadMediaResponse" message="tns:IMediaDataService_UploadMedia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/UploadMediaMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_UploadMedia_MediaFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/UploadMediaUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_UploadMedia_UserFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMediaThumbnail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaService/UploadMediaThumbnail" name="UploadThumbFileInfo" message="tns:UploadThumbFileInfo" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaService/UploadMediaThumbnailResponse" message="tns:IMediaDataService_UploadMediaThumbnail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/UploadMediaThumbnailUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_UploadMediaThumbnail_UserFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMediaService/UploadMediaThumbnailMediaFaultFault" name="MediaFaultFault" message="tns:IMediaDataService_UploadMediaThumbnail_MediaFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/LoginUser" message="tns:IMediaDataService_LoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/LoginUserResponse" message="tns:IMediaDataService_LoginUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserService/LoginUserUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_LoginUser_UserFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/RegisterUser" message="tns:IMediaDataService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/RegisterUserResponse" message="tns:IMediaDataService_RegisterUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserService/RegisterUserUserFaultFault" name="UserFaultFault" message="tns:IMediaDataService_RegisterUser_UserFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicBinding" type="tns:IMediaDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteMedia">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/DeleteMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMedia">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/DownloadMedia" style="document" />
+      <wsdl:input name="DownloadChunkRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownloadFileInfo">
+        <soap:header message="tns:DownloadFileInfo_Headers" part="FileName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMediaThumbnail">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/DownloadMediaThumbnail" style="document" />
+      <wsdl:input name="DownloadRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownloadFileInfo">
+        <soap:header message="tns:DownloadFileInfo_Headers" part="FileName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserMediaFilesName">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/GetAllUserMediaFilesName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserMediaMetadata">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/GetAllUserMediaMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaMetadata">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/GetMediaMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMediaMetadata">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/UpdateMediaMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMedia">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/UploadMedia" style="document" />
+      <wsdl:input name="UploadMediaFileInfo">
+        <soap:header message="tns:UploadMediaFileInfo_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:UploadMediaFileInfo_Headers" part="UserName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMediaThumbnail">
+      <soap:operation soapAction="http://tempuri.org/IMediaService/UploadMediaThumbnail" style="document" />
+      <wsdl:input name="UploadThumbFileInfo">
+        <soap:header message="tns:UploadThumbFileInfo_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:UploadThumbFileInfo_Headers" part="MediaFileName" use="literal" />
+        <soap:header message="tns:UploadThumbFileInfo_Headers" part="UserName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MediaFaultFault">
+        <soap:fault use="literal" name="MediaFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/LoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserFaultFault">
+        <soap:fault use="literal" name="UserFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MediaDataService">
+    <wsdl:port name="BasicBinding" binding="tns:BasicBinding">
+      <soap:address location="http://localhost:4147/MediaDataService.svc/MediaData" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

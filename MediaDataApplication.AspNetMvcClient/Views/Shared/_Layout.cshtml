@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr") 
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("Styles", required: false)    
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">
+                        <img class="site-logo" src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/7QBIUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAA8cAVoAAxslRxwCAAACAAIAOEJJTQQlAAAAAAAQ/OEfici3yXgvNGI0B1h36//hACJFeGlmAABNTQAqAAAACAABARIAAwAAAAEAAQAAAAAAAP/hBA5odHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+DQo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+DQoJPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4NCgkJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjVEMjA4OTI0OTNCRkRCMTE5MTRBODU5MEQzMTUwOEM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFDOENEODI3QkU3QTExRTE5QjBDRjFFOUM5RTcxQTNCIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFDOENEODI2QkU3QTExRTE5QjBDRjFFOUM5RTcxQTNCIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIElsbHVzdHJhdG9yIENTNSI+DQoJCQk8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NUY0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" />
+                        @Html.ActionLink("My Media Manager", "Index", "Home")
+                    </p>
+                </div>
+                <div class="float-right">
+                    <section class="logout">
+                        @if (User.Identity.IsAuthenticated) {
+                            <text>
+                                Hello, <span class="username">@User.Identity.Name</span>
+                                @using (Ajax.BeginForm("Logout", "Account", null, new AjaxOptions { HttpMethod = "POST" }, new { id = "logoutForm" })) {
+                                    @Html.AntiForgeryToken()
+                                    <a href="javascript:void(0)" onclick=" document.getElementById('logoutForm').submit(); ">Log out</a>
+                                }
+                            </text>
+                        }
+                    </section> 
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()  
+            </section>    
+        </div>     
+                       
+        <footer>
+            <div id="PopupWrapper"></div>
+        </footer>
+        
+        @*        @Scripts.Render("~/bundles/jqueryui")     *@
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/common")
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

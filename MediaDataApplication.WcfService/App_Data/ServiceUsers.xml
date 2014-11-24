@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Users>
+  <User>
+    <UserName>Admin</UserName>
+    <Password>123456</Password>
+    <Roles>Administrator, Member, Quest</Roles>
+  </User>
+  <User>
+    <UserName>ASP.NET MVC</UserName>
+    <Password>654321</Password>
+    <Roles>Member, Quest</Roles>
+  </User>
+  <User>
+    <UserName>Quest</UserName>
+    <Password>1</Password>
+    <Roles>Quest</Roles>
+  </User>
+</Users>

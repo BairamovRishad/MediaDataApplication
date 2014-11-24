@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.WcfService", "MediaDataApplication.WcfService\MediaDataApplication.WcfService.csproj", "{C18BBBB6-A9E9-4439-AF87-85CD453223F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.AspNetMvcClient", "MediaDataApplication.AspNetMvcClient\MediaDataApplication.AspNetMvcClient.csproj", "{EA246F77-1012-4626-AA8A-09ECC15968FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C18BBBB6-A9E9-4439-AF87-85CD453223F7} = {C18BBBB6-A9E9-4439-AF87-85CD453223F7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.WcfService.Logic", "MediaDataApplication.WcfService.Logic\MediaDataApplication.WcfService.Logic.csproj", "{43AE663F-2799-43A8-902C-AE6A880B9D07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.WcfService.BDO", "MediaDataApplication.WcfService.BDO\MediaDataApplication.WcfService.BDO.csproj", "{E4B443E9-8BE3-4FC1-A753-335111F2950A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.WcfService.DAL", "MediaDataApplication.WcfService.DAL\MediaDataApplication.WcfService.DAL.csproj", "{14014AD6-CB79-4DA8-9134-7F3D5C81D249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.AspNetMvcClient.CredentialMessageInspector", "MediaDataApplication.AspNetMvcClient.CredentialMessageInspector\MediaDataApplication.AspNetMvcClient.CredentialMessageInspector.csproj", "{4F764903-AD88-441E-9F78-C2AAFAB81D2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{BEB5F484-77D9-49DA-944D-3702D7286D1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaDataApplication.WcfService.Tests", "MediaDataApplication.WcfService.UnitTests\MediaDataApplication.WcfService.Tests.csproj", "{8D7B8A0E-6746-458E-B3E1-AEBA657C2229}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C18BBBB6-A9E9-4439-AF87-85CD453223F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C18BBBB6-A9E9-4439-AF87-85CD453223F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C18BBBB6-A9E9-4439-AF87-85CD453223F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C18BBBB6-A9E9-4439-AF87-85CD453223F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA246F77-1012-4626-AA8A-09ECC15968FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA246F77-1012-4626-AA8A-09ECC15968FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA246F77-1012-4626-AA8A-09ECC15968FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA246F77-1012-4626-AA8A-09ECC15968FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43AE663F-2799-43A8-902C-AE6A880B9D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AE663F-2799-43A8-902C-AE6A880B9D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AE663F-2799-43A8-902C-AE6A880B9D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AE663F-2799-43A8-902C-AE6A880B9D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B443E9-8BE3-4FC1-A753-335111F2950A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B443E9-8BE3-4FC1-A753-335111F2950A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B443E9-8BE3-4FC1-A753-335111F2950A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B443E9-8BE3-4FC1-A753-335111F2950A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14014AD6-CB79-4DA8-9134-7F3D5C81D249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14014AD6-CB79-4DA8-9134-7F3D5C81D249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14014AD6-CB79-4DA8-9134-7F3D5C81D249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14014AD6-CB79-4DA8-9134-7F3D5C81D249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F764903-AD88-441E-9F78-C2AAFAB81D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F764903-AD88-441E-9F78-C2AAFAB81D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F764903-AD88-441E-9F78-C2AAFAB81D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F764903-AD88-441E-9F78-C2AAFAB81D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7B8A0E-6746-458E-B3E1-AEBA657C2229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7B8A0E-6746-458E-B3E1-AEBA657C2229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7B8A0E-6746-458E-B3E1-AEBA657C2229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7B8A0E-6746-458E-B3E1-AEBA657C2229}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C18BBBB6-A9E9-4439-AF87-85CD453223F7} = {BEB5F484-77D9-49DA-944D-3702D7286D1A}
+		{43AE663F-2799-43A8-902C-AE6A880B9D07} = {BEB5F484-77D9-49DA-944D-3702D7286D1A}
+		{E4B443E9-8BE3-4FC1-A753-335111F2950A} = {BEB5F484-77D9-49DA-944D-3702D7286D1A}
+		{14014AD6-CB79-4DA8-9134-7F3D5C81D249} = {BEB5F484-77D9-49DA-944D-3702D7286D1A}
+		{8D7B8A0E-6746-458E-B3E1-AEBA657C2229} = {BEB5F484-77D9-49DA-944D-3702D7286D1A}
+	EndGlobalSection
+EndGlobal

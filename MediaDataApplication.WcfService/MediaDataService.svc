@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MediaDataApplication.WcfService.MediaDataService" CodeBehind="MediaDataService.svc.cs" %>

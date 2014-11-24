@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <section class="loginRegisterForm">
+            <div id="loginPanel">
+                @Html.Partial("~/Views/Account/_Login.cshtml")
+            </div>
+            <div id="registerPanel">
+                @Html.Partial("~/Views/Account/_Register.cshtml")
+            </div>
+        </section>
+        <section class="welcome">
+            <h2>Welcome!</h2>
+            <div class="alert alert-info">
+                <h4>
+                    <strong>Default user:</strong><br />
+                    UserName: <em>Bob</em><br /> 
+                    Password: <em>password</em>
+                </h4>          
+            </div>  
+
+        </section>
+    </div>
+</div>  
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

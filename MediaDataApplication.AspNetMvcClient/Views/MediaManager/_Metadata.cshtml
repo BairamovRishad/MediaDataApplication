@@ -1,0 +1,54 @@
+﻿@model MediaDataApplication.AspNetMvcClient.Models.MediaMetadataViewModel
+           
+<div class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Media Metadata</h4>
+            </div>  
+                      
+            @using (Ajax.BeginForm("MediaMetadataEdit", "MediaManager", null, new AjaxOptions { HttpMethod = "POST", OnSuccess = "mediaManagerMain.onMetadataEditSuccess", OnFailure = "mediaManagerMain.onMetadataEditFailure", OnComplete = "common.modal.close" }, new { id = "metadataForm", @class = "form-horizontal" })) {
+                <div class="modal-body">
+                
+                    <fieldset>
+                        @Html.TextBoxFor(model => model.MediaId, new { @class = "form-control", type = "hidden" })                                    
+                        @Html.TextBoxFor(model => model.MediaFileName, new { @class = "form-control", type = "hidden" })
+                              
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FileName, new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(model => model.FileName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.FileName)
+                            </div>           
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", id = "SongNameInput" })
+                                @Html.ValidationMessageFor(model => model.Description)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FileLength, new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9"> 
+                                @Html.TextBoxFor(model => model.FileLength, new { @class = "form-control", disabled = "disabled" })
+                                @Html.ValidationMessageFor(model => model.FileLength)
+                            </div>
+                        </div>   
+                    </fieldset>
+                   
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")

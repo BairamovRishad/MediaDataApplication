@@ -1,0 +1,40 @@
+﻿@model MediaDataApplication.AspNetMvcClient.Models.LoginViewModel
+
+<h2>Sign In.</h2>
+
+@using (Ajax.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, new AjaxOptions { HttpMethod = "POST", OnBegin = "accountLogin.onBegin", OnFailure = "accountLogin.onFailure", OnSuccess = "accountLogin.onSuccess" }, new { @class = "form-horizontal", role = "form" })) {
+    @Html.AntiForgeryToken()
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <br/>
+    <div class="form-group">                                          
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-3 control-label" })
+        <div class="col-md-6">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label" })
+        <div class="col-md-6">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="checkbox">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-3 col-md-6">
+            <input type="button" value="Register" class="btn btn-primary" id="showRegister" /> 
+            <input type="submit" value="Sign In" class="btn btn-info login" />
+        </div>
+    </div>
+}         
+          
+@Scripts.Render("/Scripts/MediaDataApplication/account-login.js")

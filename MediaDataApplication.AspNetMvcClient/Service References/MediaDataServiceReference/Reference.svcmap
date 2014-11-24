@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3cedb32e-ce67-4899-9c36-9b36d7486f7b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4147/MediaDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MediaDataService.xsd" MetadataType="Schema" ID="1f9b00ef-1023-45ac-aab3-11b1d3e8ad50" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MediaDataService1.xsd" MetadataType="Schema" ID="c94b1c17-422c-4115-a5a0-49d74b6ccb91" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MediaDataService2.xsd" MetadataType="Schema" ID="644c69f6-014d-4d92-b978-8c6ac872576a" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MediaDataService.wsdl" MetadataType="Wsdl" ID="45888382-9f3e-410f-80fe-c2a0eb47279c" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?wsdl" />
+    <MetadataFile FileName="MediaDataService3.xsd" MetadataType="Schema" ID="c0540c27-3448-4cca-be27-054c9a72caaf" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MediaDataService4.xsd" MetadataType="Schema" ID="a6375e54-faa8-4e1e-8b7b-3be28c47bde2" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MediaDataService.disco" MetadataType="Disco" ID="cac603f9-73ed-4f10-88b8-deb643551225" SourceId="1" SourceUrl="http://localhost:4147/MediaDataService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

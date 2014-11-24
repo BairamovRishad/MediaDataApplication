@@ -1,0 +1,7 @@
+2014-11-18 14:49:38.5015|ERROR|MediaDataApplication.WcfService.MediaDataService|System.IO.FileNotFoundException: File not found: 
+File name: 'A_Slower_Speed_of_Light.zip'
+   at MediaDataApplication.WcfService.DAL.Helpers.UserFilesManager.GetFileAbsolutePath(String fileName) in d:\MediaDataApplication\MediaDataApplication.WcfService.DAL\Helpers\UserFilesManager.cs:line 64
+   at MediaDataApplication.WcfService.DAL.Helpers.UserFilesManager.CopyTo(String fileName, Stream file) in d:\MediaDataApplication\MediaDataApplication.WcfService.DAL\Helpers\UserFilesManager.cs:line 15
+   at MediaDataApplication.WcfService.DAL.DAO.MediaDAO.AddMedia(String userName, String mediaFileName, Stream fileStream, Int64 length) in d:\MediaDataApplication\MediaDataApplication.WcfService.DAL\DAO\MediaDAO.cs:line 18
+   at MediaDataApplication.WcfService.Logic.MediaLogic.UploadMedia(String userName, String mediaFileName, Stream file, Int64 length) in d:\MediaDataApplication\MediaDataApplication.WcfService.Logic\MediaLogic.cs:line 66
+   at MediaDataApplication.WcfService.MediaDataService.UploadMedia(UploadMediaFileInfo uploadFileInfo) in d:\MediaDataApplication\MediaDataApplication.WcfService\MediaDataService.svc.cs:line 182

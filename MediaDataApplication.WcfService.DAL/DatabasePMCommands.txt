@@ -1,0 +1,5 @@
+﻿Enable-Migrations -StartUpProjectName 'MediaDataApplication.WcfService.DAL'	-ConnectionStringName 'DefaultConnection'
+
+Add-Migration Initial -StartUpProjectName 'MediaDataApplication.WcfService.DAL' -ConnectionStringName 'DefaultConnection'
+
+Update-Database -StartUpProjectName 'MediaDataApplication.WcfService.DAL' -ConnectionStringName 'DefaultConnection'

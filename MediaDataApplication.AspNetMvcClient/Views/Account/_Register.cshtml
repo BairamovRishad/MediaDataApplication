@@ -1,0 +1,56 @@
+﻿@model MediaDataApplication.AspNetMvcClient.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions { HttpMethod = "POST", OnBegin = "accountRegister.OnBegin", OnSuccess = "accountRegister.onSuccess", OnFailure = "accountRegister.onFailure" }, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()                                                              
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })<br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-4 control-label" })
+        <div class="col-md-6">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })   
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-4 control-label" })
+        <div class="col-md-6">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-4 control-label" })
+        <div class="col-md-6">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })  
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-4 control-label" })
+        <div class="col-md-6">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-4 control-label" })
+        <div class="col-md-6">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-4 col-md-6">         
+            <input type="submit" value="Register" class="btn btn-info register" />  
+            <input type="button" value="Cancel" class="btn btn-default" id="showLogin" /> 
+        </div>
+    </div>
+}       
+
+@Scripts.Render("/Scripts/MediaDataApplication/account-register.js")
